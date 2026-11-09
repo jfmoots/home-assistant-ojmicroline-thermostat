@@ -1,5 +1,5 @@
 {
-  "name": "OJ Microline Thermostat",
+  "name": "OJ Microline Thermostat Local (jfmoots)",
   "homeassistant": "2026.10.0",
   "render_readme": true,
   "zip_release": true,

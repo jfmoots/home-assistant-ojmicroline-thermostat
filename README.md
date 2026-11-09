@@ -1,3 +1,30 @@
+# OJ Microline Thermostat Local — maintained fork
+
+This fork adds an experimental HA-hosted WG4 local gateway to the original
+OJ Microline integration. Start with [local setup and recovery](docs/WG4_LOCAL.md).
+Only firmware `1012M201` with a verified private device profile is currently
+validated; cloud mode remains available for the original supported models.
+
+## Install this fork through HACS
+
+Add `https://github.com/jfmoots/home-assistant-ojmicroline-thermostat` as a
+**custom repository**, category **Integration**, then install **OJ Microline
+Thermostat Local (jfmoots)**. If the original repository is already managed by
+HACS, back up HA and remove its HACS download tracking before installing this
+fork. Keep your existing HA integration configuration entry and entity registry.
+Both repositories use the same component domain, so only this fork should
+manage its updates. Restart HA after installation. A manual file copy alone does
+not change the updater's repository source.
+
+Private profiles, metadata, and certificates live under HA's config and
+`.storage`, outside the downloaded component. Releases never include them.
+Read [fork maintenance](docs/FORK_MAINTENANCE.md) before taking future updates.
+
+Original integration documentation follows. Its cloud-only descriptions do not
+apply to the optional local backend's documented limitations.
+
+---
+
 <!-- PROJECT SHIELDS -->
 [![hacs_badge][hacs-shield]][hacs-url]
 ![Project Stage][project-stage-shield]
@@ -37,7 +64,7 @@ Add this integration using HACS by searching for `OJ Microline Thermostat` on th
 ## Manual installation
 
 Create a directory called `ojmicroline_thermostat` in the `<config directory>/custom_components/` directory on your Home Assistant instance.
-Download `ojmicroline_thermostat.zip` from the [latest release](https://github.com/robbinjanssen/home-assistant-ojmicroline-thermostat/releases/latest) and extract it into the new `<config directory>/custom_components/ojmicroline_thermostat/` directory you just created.
+Download `ojmicroline_thermostat.zip` from the [latest release](https://github.com/jfmoots/home-assistant-ojmicroline-thermostat/releases/latest) and extract it into the new `<config directory>/custom_components/ojmicroline_thermostat/` directory you just created.
 
 ## Configuration
 
